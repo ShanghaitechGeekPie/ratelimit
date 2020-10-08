@@ -1,0 +1,16 @@
+{
+  "data": [
+    {
+      "Bandwidth": 1024,
+      "LocalAddr": "0.0.0.0:12345",
+      "RemoteAddr": "127.0.0.1:8000",
+      "ID": 1
+    },
+    {
+      "Bandwidth": 9999999,
+      "LocalAddr": "0.0.0.0:18888",
+      "RemoteAddr": "127.0.0.1:10808",
+      "ID": 2
+    }
+  ]
+}
