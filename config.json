@@ -1,16 +1,14 @@
 {
-  "data": [
-    {
-      "Bandwidth": 1024,
-      "LocalAddr": "0.0.0.0:12345",
-      "RemoteAddr": "127.0.0.1:8000",
-      "ID": 1
-    },
-    {
-      "Bandwidth": 9999999,
-      "LocalAddr": "0.0.0.0:18888",
-      "RemoteAddr": "127.0.0.1:10808",
-      "ID": 2
-    }
-  ]
+  "listen": "0.0.0.0:8001",
+  "policy": [{
+    "bandwidth": 102400,
+    "burst":102400,
+    "source": "10.0.0.0/8",
+    "destination": "127.0.0.1:8000"
+  },{
+    "bandwidth": 10240,
+    "burst":10240,
+    "source": "0.0.0.0/0",
+    "destination": "127.0.0.1:8000"
+  }]
 }
