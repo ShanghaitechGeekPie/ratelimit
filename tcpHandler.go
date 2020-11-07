@@ -29,19 +29,16 @@ func handleCopy(connFrom net.Conn, connTo net.Conn, bucket *Bucket, wg *sync.Wai
 	for {
 		readLength, err := connFrom.Read(buffer)
 		bucket.Wait(int64(readLength))
-		if err != nil && err != io.EOF {
+		if err != nil || readLength == 0 {
 			break
 		}
-		if readLength != 0 {
-			var err error
-			if readLength == bufferSize {
-				_, err = connTo.Write(buffer)
-			} else {
-				_, err = connTo.Write(buffer[:readLength])
-			}
-			if err != nil {
-				break
-			}
+		if readLength == bufferSize {
+			_, err = connTo.Write(buffer)
+		} else {
+			_, err = connTo.Write(buffer[:readLength])
+		}
+		if err != nil {
+			break
 		}
 	}
 }
