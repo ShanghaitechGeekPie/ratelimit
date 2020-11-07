@@ -8,7 +8,7 @@
       "destination": "MirrorsFrontend:80"
     },
     {
-      "bandwidth": 10240,
+      "bandwidth": 8192,
       "burst": 10240,
       "source": "0.0.0.0/0",
       "destination": "MirrorsFrontend:80"
