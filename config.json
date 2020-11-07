@@ -5,13 +5,13 @@
       "bandwidth": 102400,
       "burst": 102400,
       "source": "10.0.0.0/8",
-      "destination": "MirrorsFrontend:80"
+      "destination": "router-spfa:443"
     },
     {
       "bandwidth": 8192,
       "burst": 10240,
       "source": "0.0.0.0/0",
-      "destination": "MirrorsFrontend:80"
+      "destination": "router-spfa:443"
     }
   ]
 }

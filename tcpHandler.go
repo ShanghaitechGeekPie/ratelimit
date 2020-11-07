@@ -67,6 +67,7 @@ func HandleTCP(config *ServerConfig) {
 	for {
 		connectionToLocal, err := lis.Accept()
 		if err == nil {
+			log.Print(connectionToLocal.)
 			go handleForward(config, connectionToLocal)
 		}
 	}
