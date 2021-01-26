@@ -2,8 +2,8 @@
   "listen": "0.0.0.0:443",
   "policy": [
     {
-      "bandwidth": 102400,
-      "burst": 102400,
+      "bandwidth": 327680,
+      "burst": 327680,
       "source": "10.0.0.0/8",
       "destination": "router-spfa:443"
     },
